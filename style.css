@@ -642,7 +642,6 @@ nav > ul {
         position:relative;
         background-image:url(images/self.jpg);
         width:100%;
-        height:100%;
         background-repeat:no-repeat;
         background-size:100%;
         
@@ -670,12 +669,14 @@ nav > ul {
         line-height: 15px;
         font-family:"Montserrat";
         font-weight:400;
+        padding: 5vh 0;
     }
 }
 
 @media (min-width:650px) { 
     .mobile { 
         display:none;
+        
     }
 }
 
