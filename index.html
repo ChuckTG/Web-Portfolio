@@ -186,6 +186,7 @@ Just like with snowboarding, I felt that surfing and skateboarding were definate
         scrollToTopBtn.addEventListener("click", scrollToTop);
 
         function handleScroll() { 
+            if (window.innerWidth>650){
             var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
             if ((rootElement.scrollTop/scrollTotal)>0.80) {
                 scrollToTopBtn.classList.add("showBtn")
@@ -193,7 +194,7 @@ Just like with snowboarding, I felt that surfing and skateboarding were definate
             } else { 
                 scrollToTopBtn.classList.remove("showBtn")
                 
-            }
+            }}
         }
 
         document.addEventListener("scroll",handleScroll)
