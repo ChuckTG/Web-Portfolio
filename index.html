@@ -204,15 +204,31 @@ Just like with snowboarding, I felt that surfing and skateboarding were definate
 <script>
     
     function openNav() {
+        
       document.getElementById("nav-bar").style.width = "100%";
       document.getElementById('openbtn').style.display="none"
 
     }
     
     function closeNav() {
+        
       document.getElementById("nav-bar").style.width = "0%";
-      setTimeout(function(){document.getElementById("openbtn").style.display="block"},500);
+      if (window.innerWidth<650){
+      setTimeout(function(){document.getElementById("openbtn").style.display="block"},500)}
     }
+
+    function handleResize() {
+        if (window.innerWidth>650) { 
+            document.getElementById('openbtn').style.display="none"
+            closeNav()
+        }else { 
+            document.getElementById('openbtn').style.display="block"
+        }
+        
+       
+    }
+
+    window.addEventListener("resize",handleResize)
 </script>
 </body>
 
